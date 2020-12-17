@@ -326,7 +326,7 @@ extension SFAuthenticationSession: AuthSession {}
 extension AuthenticationServicesSession: ASWebAuthenticationPresentationContextProviding {
 
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
-        return UIApplication.shared()?.windows.filter({ $0.isKeyWindow }).last ?? ASPresentationAnchor()
+        return UIApplication.shared()?.windows.first ?? ASPresentationAnchor()
     }
 
 }
@@ -335,7 +335,7 @@ extension AuthenticationServicesSession: ASWebAuthenticationPresentationContextP
 extension AuthenticationServicesSessionCallback: ASWebAuthenticationPresentationContextProviding {
 
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
-        return UIApplication.shared()?.windows.filter({ $0.isKeyWindow }).last ?? ASPresentationAnchor()
+        return UIApplication.shared()?.windows.first ?? ASPresentationAnchor()
     }
 
 }
