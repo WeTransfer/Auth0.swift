@@ -103,7 +103,8 @@ extension AuthTransaction where Self: SessionCallbackTransaction {
 extension AuthenticationServicesSession: ASWebAuthenticationPresentationContextProviding {
 
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
-        return NSApplication.shared()?.windows.filter({ $0.isKeyWindow }).last ?? ASPresentationAnchor()
+        ASPresentationAnchor()
+//        return NSApplication.shared()?.windows.filter({ $0.isKeyWindow }).last ?? ASPresentationAnchor()
     }
 
 }
@@ -112,7 +113,8 @@ extension AuthenticationServicesSession: ASWebAuthenticationPresentationContextP
 extension AuthenticationServicesSessionCallback: ASWebAuthenticationPresentationContextProviding {
 
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
-        return NSApplication.shared()?.windows.filter({ $0.isKeyWindow }).last ?? ASPresentationAnchor()
+        ASPresentationAnchor()
+//        return NSApplication.shared()?.windows.filter({ $0.isKeyWindow }).last ??
     }
 
 }
