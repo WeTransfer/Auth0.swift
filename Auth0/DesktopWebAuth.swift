@@ -45,7 +45,7 @@ final class DesktopWebAuth: BaseWebAuth {
          url: URL,
          storage: TransactionStore = TransactionStore.shared,
          telemetry: Telemetry = Telemetry()) {
-        super.init(platform: "macos",
+        super.init(platform: "ios",
                    clientId: clientId,
                    url: url,
                    storage: storage,
